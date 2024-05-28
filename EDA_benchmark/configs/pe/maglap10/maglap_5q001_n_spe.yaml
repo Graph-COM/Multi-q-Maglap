@@ -1,0 +1,22 @@
+model:
+  pe_file_name: maglap_5q_n_spe
+  pe_type: maglap
+  q: 0.01
+  q_dim: 5
+  pe_strategy: variant
+  mag_pe_dim_input: 10
+  mag_pe_dim_output: 10
+  se_pe_dim_input: 0
+  se_pe_dim_output: 0
+  
+  eigval_encoder:
+    in: 1
+    hidden: 32
+    out: 8
+    num_layer: 3
+
+
+  pe_embedder:
+    name: spe
+    norm: ln # "ln" (layer norm) or remove it (w/o normalization)
+    k_hops: 2

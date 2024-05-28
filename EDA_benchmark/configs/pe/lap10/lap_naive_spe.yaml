@@ -1,0 +1,18 @@
+model:
+  pe_file_name: lap_naive_spe
+  pe_type: lap
+  pe_strategy: invariant_fixed
+  pe_encoder: spe
+  lap_pe_dim_input: 10
+  lap_pe_dim_output: 10
+  se_pe_dim_input: 0
+  se_pe_dim_output: 0
+  
+  eigval_encoder:
+    in: 1
+    hidden: 32
+    out: 8
+    num_layer: 3
+
+  pe_embedder:
+    name: naive

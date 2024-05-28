@@ -1,0 +1,20 @@
+model:
+  pe_file_name: maglap_1q_naive_spe
+  pe_type: maglap
+  q: 0.1
+  q_dim: 1
+  pe_strategy: invariant_fixed
+  pe_encoder: spe
+  mag_pe_dim_input: 10
+  mag_pe_dim_output: 10
+  se_pe_dim_input: 0
+  se_pe_dim_output: 0
+  
+  eigval_encoder:
+    in: 1
+    hidden: 32
+    out: 8
+    num_layer: 3
+
+  pe_embedder:
+    name: naive

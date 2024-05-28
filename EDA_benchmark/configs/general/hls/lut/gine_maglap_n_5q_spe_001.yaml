@@ -1,0 +1,38 @@
+# sample_config.yaml
+
+utils:
+  seed: 123
+  torch_num_threads: 10
+
+task:
+  name: 'HLS'
+  type: cdfg # type: cdfg or dfg
+  target: lut # different target prediction
+  processed_folder: './data_processed/'
+  divide_seed: default #set as default or a seed
+  raw_data_path: './data_raw/HLS/'
+  data_processor: HLSDataProcessor
+
+train:
+  batch_size: 32
+  epoch: 400
+  optimizer: Adam
+  scheduler: 
+    name: StepLR
+    step_size: 100
+    gamma: 0.95
+  lr : 0.0014990580843725668
+  criterion: MSE
+  wandb: 0
+  train_files: './train_files/'
+  directed: 0
+
+model: 
+  name: GINE
+  hidden_dim: 84
+  num_layers: 4
+  node_input_dim: 7
+  edge_input_dim: 2
+  dropout: 0.3
+  mlp_out:
+    num_layer: 2
