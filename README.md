@@ -1,5 +1,4 @@
-# What Are Good Positional Encodings for
-Directed Graphs?
+# What Are Good Positional Encodings for Directed Graphs?
 
 This is the official implementation for *Multi-q Magnetic Laplacian Positional Encodings* proposed in paper "What Are Good Positional Encodings for
 Directed Graphs".
